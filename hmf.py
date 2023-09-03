@@ -40,7 +40,7 @@ fn=info[:-13]+'info_000'+info[-3:-1]+'/info_000'+info[-3:-1]+'.0.h5'
 
 if hcc=='0':
 	hc = HaloCatalog(data_ds=ds, finder_method="hop",output_dir=info[:-13],
-                         finder_kwargs={"threshold": 178, "ptype":"all"})
+                         finder_kwargs={"threshold": 160, "ptype":"all"})
 	hc.create()
 	dsh = yt.load(fn)
 elif hcc=='1':
