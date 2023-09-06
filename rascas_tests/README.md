@@ -6,6 +6,6 @@ Here you will find the codes to analyse and plot the results of some test cases 
 
 `radial_palpha.ipynb` for reproducing fig. A3. Radial profile of the scattering rate per atom, i.e., $`P_{\alpha}=P_{\alpha}(r)`$. Source emitting monochromatically from the centre.
 
-`jr_nu.ipynb` for reproducing fig. A4. Truly Hubble expanding medium at T = 0 K. Source emitting monochromatically from the centre.
+`jr_nu.ipynb` for reproducing fig. A4. Truly Hubble expanding medium at $`T = 0\,`$K. Source emitting monochromatically from the centre.
 
 
