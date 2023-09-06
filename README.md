@@ -12,3 +12,8 @@ Here you will find the necessary files to run the cosmological initial condition
 `gas_analysis.py` can be used to plot the gas density, temperature or neutral hydrogen fraction slice/projections of your `RAMSES` output. This gives more flexibility in plotting so better to use this one rather than `gas_analysis_old.py`.
 
 `dm_analysis.py` can be used to plot the DM density slice/projections of your `RAMSES` output. It can be run on both types of simulations, hydro or DM-only. This gives more flexibility in plotting so better to use this one rather than `dm_analysis_old.py`.
+
+
+Inside the folder `additional_codes` you will find some more codes for plotting and additional analysis. As they may not be directly relevant to you I have kept them in a separate folder.
+
+Inside the folder `rascas_tests` you will codes to reproduce the plots in Appendix A from the paper.
