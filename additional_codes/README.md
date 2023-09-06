@@ -8,6 +8,6 @@ Use `compare_xa.py` and `compare_T21.py` for making 6 panelled plots as in figur
 
 Use `ind_diff.py` for making single planel plots showing difference of Lyα coupling or 21-cm signal as well as making distribution (a histogram) of the difference.
 
-`nu.py` can be used to compare the output and input frequencies of MC photons. Also, use this to check the SED of the input photons. We used a Pop-II model from Barkana & Loeb (2005) for which SED$\propto \nu^{-0.86}$ (by number per frequency). 
+`nu.py` can be used to compare the output and input frequencies of MC photons. Also, use this to check the SED of the input photons. We used a Pop-II model from Barkana & Loeb (2005) for which SED$`\propto \nu^{-0.86}`$ (by number per frequency). See `SED.pdf`.
 
 `od.py` can be used to get the total optical depth of the Monte Carlo photons.
