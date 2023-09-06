@@ -8,4 +8,4 @@ Here you will find the codes to analyse and plot the results of some test cases 
 
 `jr_nu.ipynb` for reproducing fig. A4. Truly Hubble expanding medium at $`T = 0\,`$K. Source emitting monochromatically from the centre.
 
-
+`accumulated_od.ipynb`, `Palpha_map.ipynb` and `radial_palpha.ipynb` are the codes in reference to the test in A5. The main code is  the `radial_palpha.ipynb` which will give fig. A5. You can use `accumulated_od.ipynb` to check the distribution of the accumulated optical depth of the MC photons and `Palpha_map.ipynb` to see the $`P_{\alpha}`$ map.
