@@ -168,9 +168,9 @@ def zprime(zed,rc):
 
 #Returns the SED in number of photons per unit Hz per baryon.
 def phi(zed,zedp):
-	zp_by_z=(1+zp)/(1+z)
+	zp_by_z=(1+zedp)/(1+zed)
 	loc = np.where(zp_by_z>=32/27)
-	to_return = hP_by_e*2902.91*(0.75*(1+zp)/(1+z))**-0.86
+	to_return = hP_by_e*2902.91*(0.75*(1+zedp)/(1+zed))**-0.86
 	to_return[loc]=0
 	return to_return
 
