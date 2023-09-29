@@ -9,7 +9,7 @@ from matplotlib import colors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 L_cMpc_by_h = 10	#Box size in cMpc/h
-lev = 8			#levelmin (no.of cells accross each axis in log_2 units)
+lev = 8			#levelmin (no.of cells across each axis in log_2 units)
 N=6			#No.of panels.
 
 data = np.zeros((N+1,2**lev,2**lev,2**lev))
@@ -31,13 +31,11 @@ data[6,:,:,:] = np.load(dir+'compare/all_but_dir/xa.npy')
 
 print('\nPrinting statistics ...')
 for i in range(N):
-	diff = (data[i+1,:,:,:]-data[0,:,:,:])/data[0,:,:,:]
+	diff = (data[i+1,:,:,:]-data[0,:,:,:])
 	mean_diff = np.mean(diff)
 	RMS = np.sqrt(np.mean(diff**2))
-	stan_devi = np.sqrt(np.sum((diff-mean_diff)**2)/(8**lev-1))
 	print('\n',txt[i])
 	print('Mean diff =',mean_diff)
-	print('Standard deviation =',stan_devi)
 	print('RMS =',RMS)
 	
 	proj[i,:,:] = np.mean(diff,axis=2)
