@@ -6,7 +6,6 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib import colors
-from matplotlib.colors import DivergingNorm
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 L_cMpc_by_h = 10	#Box size in cMpc/h
@@ -68,7 +67,7 @@ fig.subplots_adjust(left=0.04, bottom=0.05, right=0.96, top=0.99, wspace=-0.24, 
 for i in range(3):
 	for j in range(2):
 		print('i, j, slice no.:', i,j,2*i+j)
-		c=axes[i,j].imshow(proj[2*i+j,:,:].T, cmap='bwr',aspect='equal',origin='lower',extent=[-L_cMpc_by_h/2,L_cMpc_by_h/2,-L_cMpc_by_h/2,L_cMpc_by_h/2],norm=DivergingNorm(vmin=-1,vcenter=0,vmax=30))
+		c=axes[i,j].imshow(proj[2*i+j,:,:].T, cmap='bwr',aspect='equal',origin='lower',extent=[-L_cMpc_by_h/2,L_cMpc_by_h/2,-L_cMpc_by_h/2,L_cMpc_by_h/2],vmin=-30,vmax=30)
 		axes[i,j].tick_params(axis='both', which='major', length=5, width=1, labelsize=fs,direction='in')
 		axes[i,j].tick_params(axis='both', which='minor', length=3, width=1,direction='in')
 		axes[i,j].minorticks_on()
