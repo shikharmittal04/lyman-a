@@ -4,6 +4,8 @@ Here you will find the necessary files to run the cosmological initial condition
 `music_param_file.conf` to generate the initial conditions.
 `ramses_param_file.txt` to generate the cosmological simulation boxes.
 
+The version of `RASCAS` used for this work will be made public later elsewhere.
+
 `21cmsig.py` is the main code that reads the gas density, temperature and neutral hydrogen fraction from `RAMSES` and p<sub>α</sub> from `RASCAS` and calculates various quantities such as Lyα coupling and 21-cm signal in 3D space. The outputs are in a 3D array. 
 
 `haloesinfo.py` runs a halo finder on your `RAMSES` snapshot. Then it will generate an unformatted-sequential binary file to be used by the code `PhotonsFromHaloes.f90`. The first level is the number of haloes (N), the second to (N+1)th level are the positions in code units and finally, we have the box luminosity in units of number of photons per second.
