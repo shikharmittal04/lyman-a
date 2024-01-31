@@ -1,5 +1,5 @@
 #Use this code to make density, temperature or neutral hydrogen fraction slice/projection plots.
-#Example command: python3 gas_analysis2.py -f /mnt/exports/data/mittal/outram/hydro-cool3/output_00015/ -pq 'density' -typ 'slc' -lm 8 -ah 1 -dhfe 0
+#Example command: python3 gas_analysis.py -f /mnt/exports/data/mittal/outram/hydro-cool3/output_00015/ -pq 'density' -typ 'slc' -lm 8 -ah 1 -dhfe 0
 
 import yt
 import numpy as np
@@ -35,6 +35,7 @@ if fld!='xHI':
 h = ds.hubble_constant
 
 '''
+ad = ds.all_data()
 meanfld=np.mean(ad['gas',fld])
 if fld=='density':
 	G=6.67e-11
@@ -44,13 +45,13 @@ if fld=='density':
 	z=ds.current_redshift
 	dcrit=3*(H0/Mpc2km)**2/(8*np.pi*G)
 	dgas=dcrit*Omb*(1+z)**3
-	print("\nShikhar:Mean value of",fld,"is,", meanfld.to('kg/m**3'))
-	print('The analytical estimate is,',dgas,'\n')
+	print("\nShikhar: mean value of",fld,"is", meanfld.to('kg/m**3'))
+	print('The analytical estimate is',dgas,'\n')
 elif fld=='temperature':
 	z=ds.current_redshift
 	Tb=0.0187*(1+z)**2
-	print("\nShikhar:Mean value of",fld,"is,", meanfld)
-	print('The analytical estimate based on adiabatic evolution is,',Tb,'\n')
+	print("\nShikhar: mean value of",fld,"is", meanfld)
+	print('The analytical estimate based on adiabatic evolution is',Tb,'\n')
 else:
 	print("Shikhar: I don't know the analytical estimate for this quantity!\n")
 '''
@@ -104,7 +105,7 @@ if typ=='slc':
 		cb.set_label(r'$\log_{10}x_\mathrm{H\,{\Large\textsc{\lowercase{i}}}}$',fontsize=fs)
 
 elif typ=='proj':
-	print('\nShikhar: Full depth is being projected. If you want partial depth go back to the code.\n')
+	print('\nShikhar: full depth is being projected. If you want partial depth go back to the code.\n')
 	dz=cg['gas','dz'].in_units('Mpccm').d
 	if fld=='density':
 		quan=quan.to('kg/m**3').d
