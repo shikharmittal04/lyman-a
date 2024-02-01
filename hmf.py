@@ -16,8 +16,6 @@ from colossus.lss import peaks
 my_cosmo = {'flat': True, 'H0': 67.4, 'Om0': 0.315, 'Ob0': 0.049, 'sigma8': 0.811, 'ns': 0.965,'relspecies': False,'Tcmb0': 2.725}
 cosmo = cosmology.setCosmology('my_cosmo', my_cosmo)
 
-h=0.674
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f","--file", help="enter path of RAMSES output folder")
@@ -29,6 +27,7 @@ hcc=input('Halo catalogue created? (1 or 0): ')
 ds = yt.load(info)
 z=ds.current_redshift
 l=ds.length_unit.in_units('Mpccm')
+h = ds.hubble_constant
 
 V=(l.d*h)**3 #Volume in (cMpc/h)^3
 
